@@ -1,0 +1,17 @@
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\bin\Debug\net6.0-windows\Lab2Visual.exe
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\bin\Debug\net6.0-windows\Lab2Visual.deps.json
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\bin\Debug\net6.0-windows\Lab2Visual.runtimeconfig.json
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\bin\Debug\net6.0-windows\Lab2Visual.dll
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\bin\Debug\net6.0-windows\Lab2Visual.pdb
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\obj\Debug\net6.0-windows\Lab2Visual.csproj.AssemblyReference.cache
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\obj\Debug\net6.0-windows\Lab2Visual.Form1.resources
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\obj\Debug\net6.0-windows\Lab2Visual.csproj.GenerateResource.cache
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\obj\Debug\net6.0-windows\Lab2Visual.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\obj\Debug\net6.0-windows\Lab2Visual.AssemblyInfoInputs.cache
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\obj\Debug\net6.0-windows\Lab2Visual.AssemblyInfo.cs
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\obj\Debug\net6.0-windows\Lab2Visual.csproj.CoreCompileInputs.cache
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\obj\Debug\net6.0-windows\Lab2Visual.dll
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\obj\Debug\net6.0-windows\refint\Lab2Visual.dll
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\obj\Debug\net6.0-windows\Lab2Visual.pdb
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\obj\Debug\net6.0-windows\Lab2Visual.genruntimeconfig.cache
+C:\Users\alexa\source\repos\Lab2Visual\Lab2Visual\obj\Debug\net6.0-windows\ref\Lab2Visual.dll
