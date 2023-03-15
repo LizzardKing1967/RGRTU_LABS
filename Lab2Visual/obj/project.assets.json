@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexa\\source\\repos\\Lab2Visual\\Lab2Visual\\Lab2Visual.csproj",
+      "projectUniqueName": "C:\\Learning\\Projects\\Forms\\repos\\Lab2Visual\\Lab2Visual\\Lab2Visual.csproj",
       "projectName": "Lab2Visual",
-      "projectPath": "C:\\Users\\alexa\\source\\repos\\Lab2Visual\\Lab2Visual\\Lab2Visual.csproj",
+      "projectPath": "C:\\Learning\\Projects\\Forms\\repos\\Lab2Visual\\Lab2Visual\\Lab2Visual.csproj",
       "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexa\\source\\repos\\Lab2Visual\\Lab2Visual\\obj\\",
+      "outputPath": "C:\\Learning\\Projects\\Forms\\repos\\Lab2Visual\\Lab2Visual\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
