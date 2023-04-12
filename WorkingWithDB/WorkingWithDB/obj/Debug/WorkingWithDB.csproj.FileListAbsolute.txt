@@ -33,3 +33,4 @@ A:\visual\WorkingWithDB\WorkingWithDB\obj\Debug\WorkingWithDB.csproj.GenerateRes
 A:\visual\WorkingWithDB\WorkingWithDB\obj\Debug\WorkingWithDB.csproj.CoreCompileInputs.cache
 A:\visual\WorkingWithDB\WorkingWithDB\obj\Debug\WorkingWithDB.exe
 A:\visual\WorkingWithDB\WorkingWithDB\obj\Debug\WorkingWithDB.pdb
+A:\visual\WorkingWithDB\WorkingWithDB\obj\Debug\WorkingWithDB.Form2Choose.resources

@@ -33,10 +33,18 @@
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.инструментыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.осортироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поискПоНомеруЦехаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ShopNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FIO = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PROFESSION = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Charge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Experience = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -70,9 +78,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.осортироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поискПоСотрудникуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поискПоНомеруЦехаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -89,7 +94,7 @@
             this.справкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(804, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(688, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -113,7 +118,6 @@
             this.инструментыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.обновитьToolStripMenuItem,
             this.осортироватьToolStripMenuItem,
-            this.поискПоСотрудникуToolStripMenuItem,
             this.поискПоНомеруЦехаToolStripMenuItem});
             this.инструментыToolStripMenuItem.Name = "инструментыToolStripMenuItem";
             this.инструментыToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
@@ -122,15 +126,30 @@
             // обновитьToolStripMenuItem
             // 
             this.обновитьToolStripMenuItem.Name = "обновитьToolStripMenuItem";
-            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.обновитьToolStripMenuItem.Text = "Обновить";
             this.обновитьToolStripMenuItem.Click += new System.EventHandler(this.обновитьToolStripMenuItem_Click);
+            // 
+            // осортироватьToolStripMenuItem
+            // 
+            this.осортироватьToolStripMenuItem.Name = "осортироватьToolStripMenuItem";
+            this.осортироватьToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.осортироватьToolStripMenuItem.Text = "Осортировать";
+            this.осортироватьToolStripMenuItem.Click += new System.EventHandler(this.осортироватьToolStripMenuItem_Click);
+            // 
+            // поискПоНомеруЦехаToolStripMenuItem
+            // 
+            this.поискПоНомеруЦехаToolStripMenuItem.Name = "поискПоНомеруЦехаToolStripMenuItem";
+            this.поискПоНомеруЦехаToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.поискПоНомеруЦехаToolStripMenuItem.Text = "Поиск по номеру цеха";
+            this.поискПоНомеруЦехаToolStripMenuItem.Click += new System.EventHandler(this.поискПоНомеруЦехаToolStripMenuItem_Click);
             // 
             // справкаToolStripMenuItem
             // 
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.справкаToolStripMenuItem.Text = "Справка";
+            this.справкаToolStripMenuItem.Click += new System.EventHandler(this.справкаToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -142,29 +161,67 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(804, 482);
+            this.tabControl1.Size = new System.Drawing.Size(688, 482);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.listBox1);
+            this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(796, 456);
+            this.tabPage1.Size = new System.Drawing.Size(680, 456);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "SELECT";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // listView1
             // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(3, 3);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(790, 450);
-            this.listBox1.TabIndex = 0;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.ShopNumber,
+            this.FIO,
+            this.PROFESSION,
+            this.Charge,
+            this.Experience});
+            this.listView1.HideSelection = false;
+            this.listView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.listView1.Location = new System.Drawing.Point(0, 4);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(682, 456);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // ID
+            // 
+            this.ID.Text = "ID";
+            this.ID.Width = 33;
+            // 
+            // ShopNumber
+            // 
+            this.ShopNumber.Text = "Номер цеха";
+            this.ShopNumber.Width = 80;
+            // 
+            // FIO
+            // 
+            this.FIO.Text = "Ф.И.О";
+            this.FIO.Width = 165;
+            // 
+            // PROFESSION
+            // 
+            this.PROFESSION.Text = "Профессия";
+            this.PROFESSION.Width = 137;
+            // 
+            // Charge
+            // 
+            this.Charge.Text = "Разряд";
+            this.Charge.Width = 140;
+            // 
+            // Experience
+            // 
+            this.Experience.Text = "Опыт работы";
+            this.Experience.Width = 151;
             // 
             // tabPage2
             // 
@@ -184,7 +241,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(796, 456);
+            this.tabPage2.Size = new System.Drawing.Size(680, 456);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "INSERT";
             // 
@@ -310,7 +367,7 @@
             this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(796, 456);
+            this.tabPage3.Size = new System.Drawing.Size(680, 456);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "UPDATE";
             // 
@@ -441,7 +498,7 @@
             this.tabPage4.Controls.Add(this.label6);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(796, 456);
+            this.tabPage4.Size = new System.Drawing.Size(680, 456);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "DELETE";
             // 
@@ -483,30 +540,11 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "ID";
             // 
-            // осортироватьToolStripMenuItem
-            // 
-            this.осортироватьToolStripMenuItem.Name = "осортироватьToolStripMenuItem";
-            this.осортироватьToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.осортироватьToolStripMenuItem.Text = "Осортировать";
-            this.осортироватьToolStripMenuItem.Click += new System.EventHandler(this.осортироватьToolStripMenuItem_Click);
-            // 
-            // поискПоСотрудникуToolStripMenuItem
-            // 
-            this.поискПоСотрудникуToolStripMenuItem.Name = "поискПоСотрудникуToolStripMenuItem";
-            this.поискПоСотрудникуToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.поискПоСотрудникуToolStripMenuItem.Text = "Поиск по сотруднику";
-            // 
-            // поискПоНомеруЦехаToolStripMenuItem
-            // 
-            this.поискПоНомеруЦехаToolStripMenuItem.Name = "поискПоНомеруЦехаToolStripMenuItem";
-            this.поискПоНомеруЦехаToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.поискПоНомеруЦехаToolStripMenuItem.Text = "Поиск по номеру цеха";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 506);
+            this.ClientSize = new System.Drawing.Size(688, 506);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -536,8 +574,6 @@
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -574,8 +610,15 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.ToolStripMenuItem осортироватьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem поискПоСотрудникуToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem поискПоНомеруЦехаToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.ColumnHeader ShopNumber;
+        private System.Windows.Forms.ColumnHeader FIO;
+        private System.Windows.Forms.ColumnHeader PROFESSION;
+        private System.Windows.Forms.ColumnHeader Charge;
+        private System.Windows.Forms.ColumnHeader Experience;
     }
 }
 

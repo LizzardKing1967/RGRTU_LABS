@@ -151,7 +151,7 @@ namespace WorkingWithDB
 
         private async void bdOutput(SqlDataReader sqlReader, SqlCommand command)
         {
-            listBox1.Items.Clear();
+            listView1.Items.Clear();
 
             try
             {
@@ -159,9 +159,15 @@ namespace WorkingWithDB
 
                 while (await sqlReader.ReadAsync())
                 {
-                    listBox1.Items.Add(Convert.ToString(sqlReader["Id"]) + "    " + Convert.ToString(sqlReader["ShopNumber"]) +
-                     "       " + Convert.ToString(sqlReader["FIO"]) + "       " + Convert.ToString(sqlReader["Profesion"]) +
-                     "       " + Convert.ToString(sqlReader["Discharge"]) + "       " + Convert.ToString(sqlReader["Experience"]));
+                    //listView1.Items.Add(Convert.ToString(sqlReader["Id"]) + "    " + Convert.ToString(sqlReader["ShopNumber"]) +
+                    // "       " + Convert.ToString(sqlReader["FIO"]) + "       " + Convert.ToString(sqlReader["Profesion"]) +
+
+                    // "       " + Convert.ToString(sqlReader["Discharge"]) + "       " + Convert.ToString(sqlReader["Experience"]));
+                    ListViewItem listViewItem = new ListViewItem(new string[] { Convert.ToString(sqlReader["Id"]), 
+                        Convert.ToString(sqlReader["ShopNumber"]), Convert.ToString(sqlReader["FIO"]), 
+                        Convert.ToString(sqlReader["Profesion"]), Convert.ToString(sqlReader["Discharge"]), 
+                        Convert.ToString(sqlReader["Experience"]) });
+                    listView1.Items.Add(listViewItem);
                 }
             }
             catch (Exception ex)
@@ -181,6 +187,27 @@ namespace WorkingWithDB
         {
             SqlCommand command = new SqlCommand("SELECT * FROM [Shops] ORDER BY [ShopNumber] ", sqlConnection);
             bdOutput(null, command); 
+        }
+
+        private void поискПоНомеруЦехаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2Choose form2 = new Form2Choose(this);
+            form2.Owner = this;
+            form2.Show();
+            form2.label1.Visible = true;
+            form2.label1.Text = "Введите номер цеха";
+        }
+
+        public void ShopSearch(string searchVal)
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM [Shops] WHERE [ShopNumber] =  @searh", sqlConnection);
+            command.Parameters.AddWithValue("@searh", searchVal);
+            bdOutput(null, command);
+        }
+
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
