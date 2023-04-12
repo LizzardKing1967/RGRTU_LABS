@@ -22,38 +22,12 @@ namespace WorkingWithDB
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            //Change this path "C:\Users\HOME\Desktop\c#\WorkingWithDB\WorkingWithDB\Database.mdf" for your own computer
             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=A:\visual\WorkingWithDB\WorkingWithDB\Database.mdf;Integrated Security=True";
-
             sqlConnection = new SqlConnection(connectionString);
-
             await sqlConnection.OpenAsync();
-
             SqlDataReader sqlReader = null;
-
             SqlCommand command = new SqlCommand("SELECT * FROM [Shops]", sqlConnection);
-
-            try
-            {
-                sqlReader = await command.ExecuteReaderAsync();
-
-                while (await sqlReader.ReadAsync())
-                {
-                    listBox1.Items.Add(Convert.ToString(sqlReader["Id"]) + "    " + Convert.ToString(sqlReader["ShopNumber"]) + 
-                        "       " + Convert.ToString(sqlReader["FIO"]) + "       " + Convert.ToString(sqlReader["Profesion"]) +
-                        "       " + Convert.ToString(sqlReader["Discharge"]) + "       " + Convert.ToString(sqlReader["Experience"]));
-                        
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                if (sqlReader != null)
-                    sqlReader.Close();
-            }
+            bdOutput(sqlReader, command);
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
@@ -103,32 +77,9 @@ namespace WorkingWithDB
 
         private async void обновитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
-
             SqlDataReader sqlReader = null;
-
             SqlCommand command = new SqlCommand("SELECT * FROM [Shops] ", sqlConnection);
-
-            try
-            {
-                sqlReader = await command.ExecuteReaderAsync();
-
-                while (await sqlReader.ReadAsync())
-                {
-                    listBox1.Items.Add(Convert.ToString(sqlReader["Id"]) + "    " + Convert.ToString(sqlReader["ShopNumber"]) +
-                     "       " + Convert.ToString(sqlReader["FIO"]) + "       " + Convert.ToString(sqlReader["Profesion"]) +
-                     "       " + Convert.ToString(sqlReader["Discharge"]) + "       " + Convert.ToString(sqlReader["Experience"]));
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString(), ex.Source.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                if (sqlReader != null)
-                    sqlReader.Close();
-            }
+            bdOutput(sqlReader, command);
         }
 
         private async void button2_Click(object sender, EventArgs e)
@@ -198,15 +149,9 @@ namespace WorkingWithDB
 
         }
 
-        
-
-        private async void осортироватьToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void bdOutput(SqlDataReader sqlReader, SqlCommand command)
         {
             listBox1.Items.Clear();
-
-            SqlDataReader sqlReader = null;
-
-            SqlCommand command = new SqlCommand("SELECT * FROM [Shops] ORDER BY [ShopNumber] ", sqlConnection);
 
             try
             {
@@ -228,7 +173,14 @@ namespace WorkingWithDB
                 if (sqlReader != null)
                     sqlReader.Close();
             }
+        }
 
+        
+
+        private async void осортироватьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM [Shops] ORDER BY [ShopNumber] ", sqlConnection);
+            bdOutput(null, command); 
         }
     }
 }
