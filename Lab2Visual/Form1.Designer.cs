@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -48,32 +49,40 @@
             this.очиститьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вычислитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.очиститьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.вычислитьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(12, 71);
+            this.label1.Location = new System.Drawing.Point(8, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 50);
+            this.label1.Size = new System.Drawing.Size(153, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Исходный вес в килограммах / фунтах";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(206, 90);
+            this.textBox1.Location = new System.Drawing.Point(144, 54);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 31);
+            this.textBox1.Size = new System.Drawing.Size(106, 23);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 218);
+            this.textBox2.Location = new System.Drawing.Point(8, 131);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(331, 31);
+            this.textBox2.Size = new System.Drawing.Size(233, 23);
             this.textBox2.TabIndex = 4;
             this.textBox2.Text = "Результат перевода:";
             this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
@@ -81,9 +90,10 @@
             // 
             // buttonRun
             // 
-            this.buttonRun.Location = new System.Drawing.Point(183, 261);
+            this.buttonRun.Location = new System.Drawing.Point(128, 157);
+            this.buttonRun.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonRun.Name = "buttonRun";
-            this.buttonRun.Size = new System.Drawing.Size(160, 59);
+            this.buttonRun.Size = new System.Drawing.Size(112, 35);
             this.buttonRun.TabIndex = 5;
             this.buttonRun.Text = "Вычислить";
             this.buttonRun.UseVisualStyleBackColor = true;
@@ -98,25 +108,28 @@
             this.panel1.Controls.Add(this.radioButtonDeutch);
             this.panel1.Controls.Add(this.radioButtonEng);
             this.panel1.Controls.Add(this.radioButtonRus);
-            this.panel1.Location = new System.Drawing.Point(380, 27);
+            this.panel1.Location = new System.Drawing.Point(266, 16);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(129, 241);
+            this.panel1.Size = new System.Drawing.Size(90, 145);
             this.panel1.TabIndex = 6;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(0, 191);
+            this.textBox3.Location = new System.Drawing.Point(0, 115);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(124, 31);
+            this.textBox3.Size = new System.Drawing.Size(88, 23);
             this.textBox3.TabIndex = 11;
             this.textBox3.Visible = false;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // ButtonOther
             // 
-            this.ButtonOther.Location = new System.Drawing.Point(4, 149);
+            this.ButtonOther.Location = new System.Drawing.Point(-1, 97);
+            this.ButtonOther.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ButtonOther.Name = "ButtonOther";
-            this.ButtonOther.Size = new System.Drawing.Size(125, 36);
+            this.ButtonOther.Size = new System.Drawing.Size(88, 22);
             this.ButtonOther.TabIndex = 10;
             this.ButtonOther.TabStop = true;
             this.ButtonOther.Text = "Другое";
@@ -125,9 +138,10 @@
             // 
             // radioButtonIsl
             // 
-            this.radioButtonIsl.Location = new System.Drawing.Point(3, 119);
+            this.radioButtonIsl.Location = new System.Drawing.Point(2, 71);
+            this.radioButtonIsl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonIsl.Name = "radioButtonIsl";
-            this.radioButtonIsl.Size = new System.Drawing.Size(125, 36);
+            this.radioButtonIsl.Size = new System.Drawing.Size(88, 22);
             this.radioButtonIsl.TabIndex = 9;
             this.radioButtonIsl.TabStop = true;
             this.radioButtonIsl.Text = "Исландия";
@@ -135,9 +149,10 @@
             // 
             // radioButtonDat
             // 
-            this.radioButtonDat.Location = new System.Drawing.Point(3, 89);
+            this.radioButtonDat.Location = new System.Drawing.Point(2, 53);
+            this.radioButtonDat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonDat.Name = "radioButtonDat";
-            this.radioButtonDat.Size = new System.Drawing.Size(122, 32);
+            this.radioButtonDat.Size = new System.Drawing.Size(85, 19);
             this.radioButtonDat.TabIndex = 8;
             this.radioButtonDat.TabStop = true;
             this.radioButtonDat.Text = "Дания";
@@ -145,9 +160,10 @@
             // 
             // radioButtonDeutch
             // 
-            this.radioButtonDeutch.Location = new System.Drawing.Point(3, 58);
+            this.radioButtonDeutch.Location = new System.Drawing.Point(2, 35);
+            this.radioButtonDeutch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonDeutch.Name = "radioButtonDeutch";
-            this.radioButtonDeutch.Size = new System.Drawing.Size(122, 36);
+            this.radioButtonDeutch.Size = new System.Drawing.Size(85, 22);
             this.radioButtonDeutch.TabIndex = 7;
             this.radioButtonDeutch.TabStop = true;
             this.radioButtonDeutch.Text = "Германия";
@@ -155,9 +171,10 @@
             // 
             // radioButtonEng
             // 
-            this.radioButtonEng.Location = new System.Drawing.Point(3, 31);
+            this.radioButtonEng.Location = new System.Drawing.Point(2, 19);
+            this.radioButtonEng.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonEng.Name = "radioButtonEng";
-            this.radioButtonEng.Size = new System.Drawing.Size(122, 32);
+            this.radioButtonEng.Size = new System.Drawing.Size(85, 19);
             this.radioButtonEng.TabIndex = 1;
             this.radioButtonEng.TabStop = true;
             this.radioButtonEng.Text = "Англия";
@@ -166,9 +183,10 @@
             // 
             // radioButtonRus
             // 
-            this.radioButtonRus.Location = new System.Drawing.Point(3, 3);
+            this.radioButtonRus.Location = new System.Drawing.Point(2, 2);
+            this.radioButtonRus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonRus.Name = "radioButtonRus";
-            this.radioButtonRus.Size = new System.Drawing.Size(122, 32);
+            this.radioButtonRus.Size = new System.Drawing.Size(85, 19);
             this.radioButtonRus.TabIndex = 0;
             this.radioButtonRus.TabStop = true;
             this.radioButtonRus.Text = "Россия";
@@ -178,17 +196,19 @@
             // 
             this.panel2.Controls.Add(this.radioButtonKg);
             this.panel2.Controls.Add(this.radioButtonFunt);
-            this.panel2.Location = new System.Drawing.Point(12, 127);
+            this.panel2.Location = new System.Drawing.Point(8, 76);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(146, 85);
+            this.panel2.Size = new System.Drawing.Size(102, 51);
             this.panel2.TabIndex = 7;
             // 
             // radioButtonKg
             // 
             this.radioButtonKg.AutoSize = true;
-            this.radioButtonKg.Location = new System.Drawing.Point(0, 44);
+            this.radioButtonKg.Location = new System.Drawing.Point(0, 26);
+            this.radioButtonKg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonKg.Name = "radioButtonKg";
-            this.radioButtonKg.Size = new System.Drawing.Size(143, 29);
+            this.radioButtonKg.Size = new System.Drawing.Size(98, 19);
             this.radioButtonKg.TabIndex = 1;
             this.radioButtonKg.Text = "Килограммы";
             this.radioButtonKg.UseVisualStyleBackColor = true;
@@ -198,9 +218,10 @@
             // 
             this.radioButtonFunt.AutoSize = true;
             this.radioButtonFunt.Checked = true;
-            this.radioButtonFunt.Location = new System.Drawing.Point(3, 9);
+            this.radioButtonFunt.Location = new System.Drawing.Point(2, 5);
+            this.radioButtonFunt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonFunt.Name = "radioButtonFunt";
-            this.radioButtonFunt.Size = new System.Drawing.Size(89, 29);
+            this.radioButtonFunt.Size = new System.Drawing.Size(61, 19);
             this.radioButtonFunt.TabIndex = 0;
             this.radioButtonFunt.TabStop = true;
             this.radioButtonFunt.Text = "Фунты";
@@ -215,7 +236,8 @@
             this.справкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(521, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(657, 24);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -225,34 +247,54 @@
             this.очиститьToolStripMenuItem,
             this.вычислитьToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(103, 29);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(70, 22);
             this.toolStripMenuItem1.Text = "Действия";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // очиститьToolStripMenuItem
             // 
             this.очиститьToolStripMenuItem.Name = "очиститьToolStripMenuItem";
-            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.очиститьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.очиститьToolStripMenuItem.Text = "Очистить";
             this.очиститьToolStripMenuItem.Click += new System.EventHandler(this.очиститьToolStripMenuItem_Click);
             // 
             // вычислитьToolStripMenuItem
             // 
             this.вычислитьToolStripMenuItem.Name = "вычислитьToolStripMenuItem";
-            this.вычислитьToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.вычислитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.вычислитьToolStripMenuItem.Text = "Вычислить";
             // 
             // справкаToolStripMenuItem
             // 
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(137, 29);
+            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.справкаToolStripMenuItem.Text = "Информация";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.очиститьToolStripMenuItem1,
+            this.вычислитьToolStripMenuItem1});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(136, 48);
+            // 
+            // очиститьToolStripMenuItem1
+            // 
+            this.очиститьToolStripMenuItem1.Name = "очиститьToolStripMenuItem1";
+            this.очиститьToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
+            this.очиститьToolStripMenuItem1.Text = "Очистить";
+            // 
+            // вычислитьToolStripMenuItem1
+            // 
+            this.вычислитьToolStripMenuItem1.Name = "вычислитьToolStripMenuItem1";
+            this.вычислитьToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
+            this.вычислитьToolStripMenuItem1.Text = "Вычислить";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 332);
+            this.ClientSize = new System.Drawing.Size(657, 262);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonRun);
@@ -261,6 +303,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "KG-FUNT";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -270,6 +313,7 @@
             this.panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,5 +341,9 @@
         private ToolStripMenuItem справкаToolStripMenuItem;
         private ToolStripMenuItem очиститьToolStripMenuItem;
         private ToolStripMenuItem вычислитьToolStripMenuItem;
+        private SaveFileDialog saveFileDialog1;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem очиститьToolStripMenuItem1;
+        private ToolStripMenuItem вычислитьToolStripMenuItem1;
     }
 }
